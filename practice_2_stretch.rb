@@ -17,5 +17,7 @@ end
 
 # testing...
 trial = [5,26,8,79,437,9673]
+print "Is the length of the result array twice the length that was passed in?   "
 puts 2*trial.length == stretch(trial).length
-puts stretch(trial).to_s
+puts "Here's the array passed in #{ trial }."
+puts "Here's the result array #{ stretch(trial) }."
