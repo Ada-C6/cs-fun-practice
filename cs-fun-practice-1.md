@@ -48,6 +48,23 @@ is stretched into the pair 9, 9, the number 7 is stretched into 4, 3,
 the number 4 is stretched into 2, 2, the number 24 is stretched into 12,
 12 and the number 11 is stretched into 6, 5.)
 
+My Solution for Problem 2:
+
+def stretch(list)
+  x = 0
+  arr = []
+  until arr.length == (list.length) * 2
+    if list[x]% 2 == 0
+      arr  += [list[x]/2, list[x]/2 ]
+    else
+      arr += [(list[x]/2) + 1, list[x]/2]
+    end
+    x += 1
+  end
+  return arr
+end
+
+
 ## Problem #3
 Write a method named `numUnique` that accepts a sorted array of integers
 as a parameter and **utilizes a hash to** calculate and return the number of
