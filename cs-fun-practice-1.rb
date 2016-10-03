@@ -86,6 +86,8 @@ def stretch(array)
 
 end
 
+
+
 # ## Problem #3
 # Write a method named `numUnique` that accepts a sorted array of integers
 # as a parameter and **utilizes a hash to** calculate and return the number of
@@ -105,8 +107,10 @@ end
 
 # If passed an empty list, your method should return **0**.
 
+
+
 def numUnique(array)
-	new_array = []
+	hash = {}
 
 	if array.length == 0
 		return "**0**"
@@ -118,23 +122,52 @@ def numUnique(array)
 			next_num = (num + 1)
 
 			unless array[num] == array[next_num]
-				new_array << array[num] 
+				hash[num] = array[num] 
 			end
 
 			num += 1
 		end
 	end
-	return "**" + new_array.length.to_s + "**"
+	return "**" + hash.length.to_s + "**"
+
+end
+
+# ## Problem #4
+# Write a method named `numUnique2` that functions the same as `numUnique`
+# except that it **does NOT use a hash** to solve the problem. In this version,
+# you should only iterate over the array, but **use no auxiliary storage**
+# outside of fixnum variables, if needed.
+
+# Remember that you can assume that the values in the array appear in
+# sorted (nondecreasing) order.
+
+
+def numUnique2(array)
+	answer = 0
+
+	if array.length == 0
+		return "**0**"
+	else
+
+		num = 0
+
+		array.length.times do
+			next_num = (num + 1)
+
+			unless array[num] == array[next_num]
+				answer += 1
+			end
+
+			num += 1
+		end
+	end
+	return "**" + answer.to_s + "**"
 
 end
 
 
 
-
-
-
-
-
+#stretch testing
 
 test2 = [18, 7, 4, 24, 11]
 # puts test
@@ -144,14 +177,27 @@ puts "[9, 9, 4, 3, 2, 2, 12, 12, 6, 5]"
 puts ''
 puts ''
 puts  ''
-puts "number 3 some duplicates"
+
+#numUnique testing
+puts "number 3 some duplicates, should be **9**"
 test3 = [5, 7, 7, 7, 8, 22, 22, 23, 31, 35, 35, 40, 40, 40, 41]
 puts numUnique(test3)
 
-puts "number 3 blank"
+puts "number 3 blank, should be **0**"
 test3sneaky = []
 puts numUnique(test3sneaky)
 
-puts "number 3 all unique"
+puts "number 3 all unique, should be **15**"
 test3check = [1, 2, 11, 17, 19, 20, 23, 24, 25, 26, 31, 34, 37, 40, 41]
 puts numUnique(test3check)
+
+#numUnique2 testing
+puts "number 4 some duplicates, should be **9**"
+puts numUnique2(test3)
+puts "number 4 blank, should be **0**"
+
+puts numUnique2(test3sneaky)
+
+puts "number 4 all unique, should be **15**"
+
+puts numUnique2(test3check)
