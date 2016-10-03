@@ -29,6 +29,8 @@ end
 # test
  # puts stretch([18, 7, 4, 24, 11])
 
+ puts ""
+
 ## Problem #3
  def num_unique(arr)
    count = 0
