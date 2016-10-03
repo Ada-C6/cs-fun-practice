@@ -1,4 +1,4 @@
-#[18, 7, 4, 24, 11] => [9, 9, 4, 3, 2, 2, 12, 12, 6, 5]
+#stretch([18, 7, 4, 24, 11]) => [9, 9, 4, 3, 2, 2, 12, 12, 6, 5]
 def stretch(int_array)
 	raise ArgumentError unless int_array.all?{|element| element.class == Fixnum}
 	stretched_array=[]
