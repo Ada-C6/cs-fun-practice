@@ -33,6 +33,7 @@ end
 
 raise "strech broke - stretch([18, 7, 4, 24, 11])" unless stretch([18, 7, 4, 24, 11]) == [9, 9, 4, 3, 2, 2, 12, 12, 6, 5]
 raise "strech broke - strech({[4, 5, 3]})" unless stretch([4, 5, 3]) == [2, 2, 3, 2, 2, 1]
+raise "strech broke - strech({[]})" unless stretch([]) == []
 puts "passes all strech tests"
 
 puts "All tests passed"
