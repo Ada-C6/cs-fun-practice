@@ -44,7 +44,7 @@ def live_stretch_without_shovel(input)
     return output
 end
 
-# ternary operator
+# ternary operator review notes:
 # conditional
 # question mark
 # what do if condition is true
