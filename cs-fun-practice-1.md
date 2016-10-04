@@ -4,7 +4,7 @@ For each of the following problems, you should write a single method to solve
 the problem. You will be working with arrays in each problem, but should use
 array indexing and loops to solve the problems. You should **not** utilize
 any [Ruby Array methods](https://ruby-doc.org/core-2.2.0/Array.html), with
-the exception of `<<`, `[]`, and `.length`.
+the exception of `[]`, `.length`, and `.new`.
 
 e.g. NOT OK
 
@@ -18,6 +18,17 @@ e.g. OK
 - `array[i] = array2[loc]` ==> OK
 - `puts array[0]` ==> OK
 - `array[-1]` ==> OK
+
+All arrays should be created using the `Array.new(int, [initial value])` constructor with a length given.  Array lengths may not be changed after creation.  Use of the second initialization value or the block initializer is acceptable.  These can be read about [here](https://ruby-doc.org/core-2.2.0/Array.html#class-Array-label-Creating+Arrays).  Furthermore, accessing an element using the `[]` notation outside of the original length will be considered wrong, although Ruby will not throw an error for it.
+
+Example
+
+- `myArray = Array.new(2)` ==> Good
+- `myArray[0] = "Ada"` ==> Good
+- `myArray[1] = "Lovelace"` ==> Good
+- `myArray[2] = 1815` ==> Bad (for this exercise) because it resizes the array from 2 to 3 elements
+
+The purpose of this is to force thoughtful creation of arrays.  This is to help emphasize the concepts of memory allocation which can be expanded upon later.  Although Ruby and many other high-level languages make it easy to resize arrays, this can lead to performance problems.  (Though it also has many convenience benefits, it can also lead to errors.)  Understanding of this will be enhanced in future lessons on Arrays vs Linked Lists.
 
 ## Problem #1
 Write a method named `print_array` that accepts an array of integers as a parameter
