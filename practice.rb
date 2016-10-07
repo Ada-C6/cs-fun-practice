@@ -51,16 +51,16 @@ end
 
 numUnique([7, 7, 7, 7, 8, 22, 22, 23, 31, 35, 35, 40, 40, 40, 41])
 
-def numUnique2(list)
-  distinct = 0
-  index = 0
-  list.each do |item|
-    if item != list[(index-1)]
-      distinct +=1
-    end
-    index +=1
-  end
-  puts distinct
-end
+# def numUnique2(list)
+#   distinct = 0
+#   index = 0
+#   list.each do |item|
+#     if item != list[(index-1)]
+#       distinct +=1
+#     end
+#     index +=1
+#   end
+#   puts distinct
+# end
 
 numUnique2([7, 7, 7, 7, 8, 22, 22, 23, 31, 35, 35, 40, 40, 40, 41])
