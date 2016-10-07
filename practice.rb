@@ -4,19 +4,19 @@ def print_array(array_of_integers)
 end
 
 ## Problem #2
-def stretch(array)
-  stretch = []
-  array.each do |i|
-    if i % 2 == 0
-      2.times do
-        stretch << i / 2
-      end
-    else
-      stretch << (i / 2) + 1
-      stretch << (i / 2)
-    end
+def stretch(input)
+  output = []
+  input.length.times do |i|
+    split_value = input[i] / 2
+    # Ternary operator: 3 pieces -
+    # conditional (input[i] % 2 == 0)
+    # ?
+    # what you do if true (split_value) and what you do if false (split_value + 1)
+    # Other languages don't have a shovel, so doing this, instead
+    output[2 * i] = (input[i] % 2 == 0 ? split_value : split_value + 1)
+    output[2 * i + 1] = split_value
   end
-  return stretch
+  return output
 end
 
 ## Problem #3
@@ -25,12 +25,27 @@ def numUnique(integer_array)
   integer_array.each do |input|
     if !numbers.has_key?(input)
       numbers[input] = 1
+    else
+      numbers[input] += 1
     end
   end
   return numbers.length
 end
 
 ## Problem #4
+# Maddie's approach:
+# def numUnique2(list)
+#   distinct = 0
+#   index = 0
+#   list.each do |item|
+#     if item != list[(index - 1)]
+#       distinct += 1
+#     end
+#     index += 1
+#   end
+#   return distinct
+# end
+
 def numUnique2(input)
   counter = 1
   number = input[0]
