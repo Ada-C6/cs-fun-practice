@@ -15,16 +15,41 @@
 # the number 4 is stretched into 2, 2, the number 24 is stretched into 12,
 # 12 and the number 11 is stretched into 6, 5.)
 
+# draft 3: short, ternary, no shovel bc other languages don't have that
 def stretch(arr)
   result = []
-  arr.each do |val|
-    if val.even?
-      result << val/2
-      result << val/2
-    else
-      result << (val/2 + 1)
-      result << val/2
-    end
+
+  arr.length.times do |i|
+    result[i * 2] = (arr[i].even? ? arr[i]/2 : (arr[i]/2 + 1))
+    result[i * 2 + 1] = arr[i]/2
   end
+
   return result
 end
+
+# # draft 2 (uses shovel)
+# def stretch(arr)
+#   result = []
+#
+#   arr.each do |val|
+#     result << (val.even? ? val/2 : (val/2 + 1))
+#     result << val/2
+#   end
+#
+#   return result
+# end
+
+# # draft 1 below
+# def stretch(arr)
+#   result = []
+#   arr.each do |val|
+#     if val.even?
+#       result << val/2
+#       result << val/2
+#     else
+#       result << (val/2 + 1)
+#       result << val/2
+#     end
+#   end
+#   return result
+# end
