@@ -1,13 +1,12 @@
 
-# Without each: 
-
+# Without each:
+#
 def stretch(array)
   new_arr = []
   len = array.length
   i = 0
-  count = 0
 
-  until count == len
+  until i == len
     if array[i] % 2 == 0
       new_arr << array[i] / 2
       new_arr << array[i] / 2
@@ -15,12 +14,10 @@ def stretch(array)
       new_arr << (array[i] / 2) + 1
       new_arr << array[i] / 2
     end
-    count += 1
     i +=1
   end
   return new_arr
 end
-
 
 # With each:
 
