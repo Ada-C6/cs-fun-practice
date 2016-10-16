@@ -4,9 +4,10 @@ def stretch(integers_array)
 
   while i < integers_array.length
 
-    if integers_array[i].to_i % 2 == 0
-      new_array << integers_array[i].to_i / 2
-      new_array << integers_array[i].to_i / 2
+    if integers_array[i].to_i % 2 == 0]
+      2.times do
+        new_array << integers_array[i].to_i / 2
+      end
     else
       new_array << (integers_array[i]/2).to_i + 1;
       new_array << (integers_array[i]/2).to_i;
