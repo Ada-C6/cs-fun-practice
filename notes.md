@@ -1,0 +1,1 @@
+1. I admit sometimes these types of problems feel unfamiliar as I'm eager to solve them but not sure where to begin. I realized that my instinct is to solve these questions with Ruby Enumberables. I shall resist the urge and try and dive deeper. 
