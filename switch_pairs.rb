@@ -16,20 +16,22 @@ def switchPairs(input)
 end
 
 # some tests to visually check
-puts "even input = [a, b, c, d]"
-puts "output " + switchPairs(["a", "b", "c", "d"]).to_s
+even_input = ["a", "b", "c", "d"]
+puts "even input is #{even_input}"
+puts "output " + switchPairs(even_input).to_s
 
 array_length_5 = [1, 2, 3, 4, 5]
 
-switched = switchPairs(array_length_5)
 
-puts "\ninput = [1, 2, 3, 4, 5]"
-puts "output " + switched.to_s
-puts "switched.length should be 5"
-puts "it's #{switched.length}" 
+puts "\ninput is #{array_length_5}"
+switchPairs(array_length_5)
+puts "output " + array_length_5.to_s
+puts "array_length_5.length should be 5"
+puts "it's #{array_length_5.length}"
 
-puts "\ninput = [cat, dog, parakeet]"
-puts "output " + switchPairs(["cat", "dog", "parakeet"]).to_s
+input = ["cat", "dog", "parakeet"]
+puts "\ninput is #{input}"
+puts "output " + switchPairs(input).to_s
 
 puts "\nwhat happens with an empty array?"
 puts switchPairs([]).to_s
