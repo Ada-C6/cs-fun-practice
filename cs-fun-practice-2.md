@@ -1,4 +1,4 @@
-# CS Fundamentals Practice #2
+# CS Fundamentals Practice #2   
 
 For each of the following problems, you should write a single method to solve
 the problem. You will be working with arrays in each problem, but should use
