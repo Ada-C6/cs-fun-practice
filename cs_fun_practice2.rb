@@ -13,20 +13,19 @@ list = [1,2,3,4]
 
 def mirror(list)
   if list ! nil
-    list.length = x
-    x.times list[x]
-    
+    new_array = []
+    num = list.length
 
-
-    # 4
+    num.times do |i|
+      new_array << list[i]
+      i += 1
+    end
+    num.times do |i|
+      i += 1
+      new_array << list[-i]
+    end
+    return new_array
   end
 end
 
-
-hat you want then write in the index numbers for each of the elements above the array.
-
-[1:27]
-The problem is really asking you “If the array is 4 elements long, how can you set the 5th element to be the same as the 4th, the 6th to be the same as the 3rd, the 7th the same as the 2nd, etc.?"
-
-[1:27]
-Does that help?
+puts "The orginal array = #{list}. However, when we call method mirror on list. mirror(list) it returns #{mirror(list)}"
