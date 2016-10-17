@@ -3,14 +3,14 @@
 
 # EXAMPLE:
 # list.length = (even)(6):
-list = ["four", "score", "and", "seven", "years", "ago"]
+# list = ["four", "score", "and", "seven", "years", "ago"]
 # should return (if done correctly)
-    # ["score", "four", "seven", "and", "ago", "years"]
+# ["score", "four", "seven", "and", "ago", "years"]
 
 # other wise list.length = (odd)(7)
-# list = ["four", "score", "and", "seven", "years", "ago", "hamlet"]
+list = ["four", "score", "and", "seven", "years", "ago", "hamlet"]
 # should return (if done correctly)
-    #["score", "four", "seven", "and", "ago", "years", "hamlet"]
+#["score", "four", "seven", "and", "ago", "years", "hamlet"]
 
 def switched_pairs(list)
   i = 0
@@ -26,4 +26,12 @@ def switched_pairs(list)
   return list
 end
 
-puts "original list = #{list} & new list = #{switched_pairs(list)}."
+puts switched_pairs(list)
+
+# testing even amount in array
+# puts "original list = #{list} & new list = #{switched_pairs(list)}."
+# => 'original list = ["four", "score", "and", "seven", "years", "ago"] & new list = ["score", "four", "seven", "and", "ago", "years"].'
+
+#testing odd amount in array
+# puts "original list = #{list} & new list = #{switched_pairs(list)}."
+# => 'original list = ["four", "score", "and", "seven", "years", "ago", "hamlet"] & new list = ["score", "four", "seven", "and", "ago", "years", "hamlet'
