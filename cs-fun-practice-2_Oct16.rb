@@ -18,8 +18,6 @@ puts mirror(arr1)
 
 # Problem 2: Write a method switchPairs that switches the order of values in an Array of strings in a pairwise fashion.
 
-arr = ["four", "score", "and", "seven", "years", "ago"]
-
 def switchPairs(arr)
   len = arr.length
   i = 0
