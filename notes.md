@@ -99,3 +99,4 @@ switch_pairs(list)
  # ["score", "four",  "and", "seven", "years", "ago"]
 	# [correct, correct, WRONG, correct, WRONG, WRONG]
 ```
+2. Again, this problem was solved but I'm assuming that array passed into the method will in fact have numbers within in. I didn't spend time anticipating how to catch user input errors. 
