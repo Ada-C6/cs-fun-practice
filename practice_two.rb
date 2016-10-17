@@ -1,48 +1,43 @@
 def mirror(list)
-# list + backwards_list = mirrored_list
-  backwards_list = []
-  index = list.length
+# because we must return a **new array**
+  mirrored_list = []
+  index = 0
 
-# index over each item in the list, backwards!
-  until backwards_list.length == list.length do
-    index -= 1
-    backwards_list << list[index]
-  end
-
-# now count back up to add the items from backwards_list to the end of list
-  until index == backwards_list.length do
-    list << backwards_list[index]
+# Index from left to right
+  until index == list.length do
+    mirrored_list << list[index]
     index += 1
   end
 
-# mirrored list
-  list
+# index over each item in the list, backwards! (right to left)
+  until index == 0 do
+    index -= 1
+    mirrored_list << list[index]
+  end
+
+  mirrored_list
 
 end
 
 
 def switchPairs(list)
-# index over the array but incement by two since it is pairs
-# switch must happen in place
-# do not switch if at the end of the array (aka the array is odd) -- the last "pairee"'s value will be nil
-
+# Index over the array
   index = 0
 
-  until index == list.length do
+# must end if index is equal to length - 1 due to index
+# starting at 0. Prevents switch with nil value not in array
+  until index >= list.length - 1 do
+
+# switch must happen in place
     item1 = list[index]
     item2 = list[index + 1]
 
-    unless item2 == nil
+    list[index] = item2
+    list[index + 1] = item1
+# Increment by two since it is pairs
+    index += 2
 
-      list[index] = item2
-      list[index + 1] = item1
-
-      index += 2
-    end
-# need to return here to break the loop of odd case -
-# in that case we skip the step of adding to index
-# length will never be equal to index.
-# Does not affect even case.
-    return list
   end
+
+  list
 end
