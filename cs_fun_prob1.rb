@@ -9,6 +9,7 @@
 
 # This will still work with whatever array list is given. I choose to assume a small array for the purpose of checking.
 # I noticed others added a validation for making sure arguments/params provided weren't empty.
+# I made assumption that input would not be an empty array. If, time allows I'd like refactor to handle this.
 
 list = [1,2,3,6]
 

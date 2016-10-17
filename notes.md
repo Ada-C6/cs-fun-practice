@@ -1,5 +1,5 @@
 # Things Learned + Questions or general notes:
-
+## problem # 1
   1. I realized that my first instinct was to solve these questions with Ruby Enums. I admit these types of problems feel unfamiliar as I'm eager to solve them but not sure where to even begin when I can't simply call, "list.reverse" then just add that back to orginal array.
 
   2. Realize the question itself is asking us to create what I like to think of as an "Any-Array" type of solution. As in it should be able to work with various different array values.
@@ -52,4 +52,50 @@ mirror(array)
 # 	digits = Array(o..list.length)
 # 	puts "#{digits}"
 # end
+```
+## problem # 2
+1. Found this problem oddly familiar and difficult. Tried to use similar reasoning to create a working method.
+
+Early Iteration:
+```
+# original: ["four", "score", "and", "seven", "years", "ago"]
+
+# should look like:
+# aftermath: ["score","four", "seven", "and", "ago", "years"]
+# Even without reading the rest of problem. I know that I'll need to have a different procedure for an array with odd amount of items vs. even.
+# in description of problem. If there is an odd number, just tack the ending on to end of array wihtout doing the switch.
+# **This switch should happen _in place_, meaning no new array should be created.** that seems unlike what I was attempting previously.
+
+list = ["four", "score", "and", "seven", "years", "ago"]
+ # list length = even (6)
+
+
+def switch_pairs(list)
+	# test to see if amount of array is even?
+		num = list.length
+
+		if num % 2 == 0
+
+			num.times do |i|
+				first_item = list[i]
+				second_item = list[i + 1]
+
+				list[i] = second_item
+				list[i+1] = first_item
+				i += 2
+			end
+		end
+	return list
+end
+
+
+switch_pairs(list)
+
+ # predict/Should return : "score", "four", "seven", "and", "ago", "years"
+ # I'm getting : ["score", "and", "seven", "years", "ago", nil, "four"]
+
+#  other configurations:
+# getting back
+ # ["score", "four",  "and", "seven", "years", "ago"]
+	# [correct, correct, WRONG, correct, WRONG, WRONG]
 ```
