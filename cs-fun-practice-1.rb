@@ -1,4 +1,4 @@
-# You will be working with arrays in each problem, but should use
+ # You will be working with arrays in each problem, but should use
 # array indexing and loops to solve the problems. You should **not** utilize
 # any [Ruby Array methods](https://ruby-doc.org/core-2.2.0/Array.html), with
 # the exception of `<<`, `[]`, and `.length`.
